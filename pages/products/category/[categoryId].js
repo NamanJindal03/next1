@@ -1,12 +1,18 @@
 import React from 'react'
-import { useParams } from 'next/navigation'
+// import { useParams } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 export default function SingleCategoryProduct() {
-    const params = useParams();
-    console.log(params)
+  /* use Param usage */
+    // const params = useParams();
+    // console.log(params)
+
+    /* useRouter usage */
+    const {query} = useRouter();
   return (
     <> 
-        {params?.categoryId}
+        {/* {params?.categoryId} */}
+        {query?.categoryId}
     </>
   )
 }
